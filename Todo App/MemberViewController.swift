@@ -1,6 +1,13 @@
+//
+//  MemberViewController.swift
+//  Todo App
+//
+//  Created by 백동현 on 2022/07/02.
+//
+
 import UIKit
 
-class ViewController: UIViewController {
+class MemberViewController: UIViewController {
     // 키보드 내리기
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
             self.view.endEditing(true)
@@ -37,12 +44,23 @@ class ViewController: UIViewController {
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
     }
 
+class MemberViewController: UIViewController {
 
-class ViewController: UIViewController {
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("ViewDidLoad call")
-        
+
+        // Do any additional setup after loading the view.
     }
+    
+
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
+    }
+    */
+
 }}

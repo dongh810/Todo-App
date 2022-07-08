@@ -8,6 +8,7 @@ target 'Todo App' do
   # Pods for Todo App
 
   pod 'Alamofire', '~> 5.2'
+  pod 'FSCalendar'
 
   target 'Todo AppTests' do
     inherit! :search_paths
