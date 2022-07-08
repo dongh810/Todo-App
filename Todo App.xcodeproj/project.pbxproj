@@ -11,6 +11,7 @@
 		88B053672863830600A2A416 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 88B05366286382FA00A2A416 /* Roboto-Medium.ttf */; };
 		88CB8E8C286F609D00CFF2BF /* MemberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CB8E8B286F609D00CFF2BF /* MemberViewController.swift */; };
 		88CB8E8E286F60D400CFF2BF /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CB8E8D286F60D400CFF2BF /* CalendarViewController.swift */; };
+		88CCF2B828789D6D00C1552F /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CCF2B728789D6D00C1552F /* AddViewController.swift */; };
 		88E2DD6D2861A13C0021E2A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E2DD6C2861A13C0021E2A3 /* AppDelegate.swift */; };
 		88E2DD6F2861A13C0021E2A3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E2DD6E2861A13C0021E2A3 /* SceneDelegate.swift */; };
 		88E2DD712861A13C0021E2A3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E2DD702861A13C0021E2A3 /* ViewController.swift */; };
@@ -50,6 +51,7 @@
 		88B05366286382FA00A2A416 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Medium.ttf"; path = "../../../Downloads/Roboto/Roboto-Medium.ttf"; sourceTree = "<group>"; };
 		88CB8E8B286F609D00CFF2BF /* MemberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberViewController.swift; sourceTree = "<group>"; };
 		88CB8E8D286F60D400CFF2BF /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		88CCF2B728789D6D00C1552F /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 		88E2DD692861A13C0021E2A3 /* Todo App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Todo App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		88E2DD6C2861A13C0021E2A3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		88E2DD6E2861A13C0021E2A3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 				88CB8E8D286F60D400CFF2BF /* CalendarViewController.swift */,
 				88E2DD772861A13D0021E2A3 /* LaunchScreen.storyboard */,
 				88E2DD7A2861A13D0021E2A3 /* Info.plist */,
+				88CCF2B728789D6D00C1552F /* AddViewController.swift */,
 			);
 			path = "Todo App";
 			sourceTree = "<group>";
@@ -418,6 +421,7 @@
 			files = (
 				88CB8E8E286F60D400CFF2BF /* CalendarViewController.swift in Sources */,
 				88CB8E8C286F609D00CFF2BF /* MemberViewController.swift in Sources */,
+				88CCF2B828789D6D00C1552F /* AddViewController.swift in Sources */,
 				88E2DD712861A13C0021E2A3 /* ViewController.swift in Sources */,
 				88E2DD6D2861A13C0021E2A3 /* AppDelegate.swift in Sources */,
 				88E2DD6F2861A13C0021E2A3 /* SceneDelegate.swift in Sources */,
