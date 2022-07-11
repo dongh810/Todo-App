@@ -1,20 +1,24 @@
 PODS:
   - Alamofire (5.6.1)
   - FSCalendar (2.8.4)
+  - IQKeyboardManagerSwift (6.5.10)
 
 DEPENDENCIES:
   - Alamofire (~> 5.2)
   - FSCalendar
+  - IQKeyboardManagerSwift
 
 SPEC REPOS:
   trunk:
     - Alamofire
     - FSCalendar
+    - IQKeyboardManagerSwift
 
 SPEC CHECKSUMS:
   Alamofire: 87bd8c952f9a4454320fce00d9cc3de57bcadaf5
   FSCalendar: 2d1d0d9398f12d439f55c1fe0f01525b151b8260
+  IQKeyboardManagerSwift: 52962c76ab33532f15ad9f3ff4e5715eda5335bb
 
-PODFILE CHECKSUM: 436d6b195b195b78eacbdc750b2185e996e54719
+PODFILE CHECKSUM: 4f6363fd159e7c97c910903b550b91b09829c063
 
 COCOAPODS: 1.11.3

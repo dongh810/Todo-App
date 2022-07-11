@@ -9,6 +9,7 @@ target 'Todo App' do
 
   pod 'Alamofire', '~> 5.2'
   pod 'FSCalendar'
+  pod 'IQKeyboardManagerSwift'
 
   target 'Todo AppTests' do
     inherit! :search_paths
