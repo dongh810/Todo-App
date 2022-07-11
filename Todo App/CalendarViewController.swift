@@ -9,13 +9,33 @@ import UIKit
 import FSCalendar
 
 class CalendarViewController: UIViewController, FSCalendarDelegate, FSCalendarDataSource{
+    @IBOutlet weak var tableView_custom: UITableView!
+    let cellName:String="customCell"
+    let cellTitle: Array<String> = ["111","222","333"]
+    let cellimage: Array<String> = ["circlebadge.fill","circlebadge.fill","circlebadge.fill"]
     
+    // 테이블 뷰 커스텀
+    /*
+     let data:[[String]] = [["하암 너무 졸려","오늘은 가슴하는날","개졸려"],["111","222","333"]]
+     let sub:[[String]] = [["얼른자야딩", "가슴개맛있겠따", "딥슬립~"],["4444","5555","66666"]]
+     let headers:[String] = ["Numbered","Lettered"]*/
     
+    // 테이블 뷰
+    
+    // 테이블 뷰 부분
+    /*@IBOutlet weak var tableView: UITableView!
+     let cellIdentifier: String = "cell"
+     
+     let korean: [String] = ["에스프레소", "아메리카노"]
+     let english: [String] = ["espresso", "americano"]*/
+    // 네비게이션 전환 코드
     @IBAction func plusBtn(_ sender: UIButton) {
         let storyBoard = UIStoryboard(name: "Sub", bundle: nil)
         let vc = storyBoard.instantiateViewController(withIdentifier: "AddViewController") as! AddViewController
         self.navigationController?.pushViewController(vc, animated: true)
     }
+    
+    //캘린더
     @IBOutlet var calendarView: FSCalendar!
     @IBOutlet weak var dateLabel: UILabel!
     private var currentPage: Date?
@@ -31,8 +51,13 @@ class CalendarViewController: UIViewController, FSCalendarDelegate, FSCalendarDa
     }()
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
         setCalendar()
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: animated)
+        /* 테이블 사이즈 알아서 조절
+         self.tableView.estimatedRowHeight = 50
+         self.tableView.rowHeight = UITableViewAutomaticDimension
+         */
     }
     private func scrollCurrentPage(isPrev: Bool) {
         let cal = Calendar.current
@@ -59,10 +84,10 @@ class CalendarViewController: UIViewController, FSCalendarDelegate, FSCalendarDa
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        calendarView.headerHeight = 20
+        calendarView.headerHeight = 0
         // YYYY년 M월 표시부 영역 높이
         
-        calendarView.weekdayHeight = 60
+        calendarView.weekdayHeight = 16
         // 날짜 표시부 행의 높이
         calendarView.appearance.headerMinimumDissolvedAlpha = 0.0
         //헤더 좌,우측 흐릿한 글씨 삭제
@@ -96,26 +121,37 @@ class CalendarViewController: UIViewController, FSCalendarDelegate, FSCalendarDa
         calendarView.calendarWeekdayView.weekdayLabels[5].text = "FRI"
         calendarView.calendarWeekdayView.weekdayLabels[6].text = "SAT"
         
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+        //테이블
+        tableView_custom.delegate = self
+        tableView_custom.dataSource = self
         
     }
     
     
     
     
+}
+extension CalendarViewController: UITableViewDataSource,UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section:Int) -> Int{
+        return cellTitle.count
+    }
+    
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let customCell = tableView_custom.dequeueReusableCell(withIdentifier: cellName,for:indexPath) as! CustomCell
+        customCell.icon.image = UIImage(systemName: cellimage[indexPath.row])
+        customCell.head.text = cellTitle[indexPath.row]
+        
+        return customCell
+    }
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+    
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
 }

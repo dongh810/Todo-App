@@ -9,11 +9,11 @@
 /* Begin PBXBuildFile section */
 		0C394AB9C94D4CEFD99291AF /* Pods_Todo_App_Todo_AppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEB8B5669FC7F45E90F78F37 /* Pods_Todo_App_Todo_AppUITests.framework */; };
 		8814A4E0287C100700671E2F /* Sub.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8814A4DF287C100700671E2F /* Sub.storyboard */; };
+		8814A4E6287CCA8600671E2F /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8814A4E5287CCA8600671E2F /* CustomCell.swift */; };
 		88B053672863830600A2A416 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 88B05366286382FA00A2A416 /* Roboto-Medium.ttf */; };
 		88CB8E8C286F609D00CFF2BF /* MemberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CB8E8B286F609D00CFF2BF /* MemberViewController.swift */; };
 		88CB8E8E286F60D400CFF2BF /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CB8E8D286F60D400CFF2BF /* CalendarViewController.swift */; };
 		88CCF2B828789D6D00C1552F /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CCF2B728789D6D00C1552F /* AddViewController.swift */; };
-		88CCF2BA2879EC7300C1552F /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CCF2B92879EC7300C1552F /* TableViewController.swift */; };
 		88E2DD6D2861A13C0021E2A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E2DD6C2861A13C0021E2A3 /* AppDelegate.swift */; };
 		88E2DD6F2861A13C0021E2A3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E2DD6E2861A13C0021E2A3 /* SceneDelegate.swift */; };
 		88E2DD712861A13C0021E2A3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E2DD702861A13C0021E2A3 /* ViewController.swift */; };
@@ -51,11 +51,11 @@
 		55281718D3E171BE29D9697B /* Pods-Todo App-Todo AppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Todo App-Todo AppUITests.release.xcconfig"; path = "Target Support Files/Pods-Todo App-Todo AppUITests/Pods-Todo App-Todo AppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		81298FC9824D33B3F4848404 /* Pods-Todo AppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Todo AppTests.release.xcconfig"; path = "Target Support Files/Pods-Todo AppTests/Pods-Todo AppTests.release.xcconfig"; sourceTree = "<group>"; };
 		8814A4DF287C100700671E2F /* Sub.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Sub.storyboard; sourceTree = "<group>"; };
+		8814A4E5287CCA8600671E2F /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		88B05366286382FA00A2A416 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Medium.ttf"; path = "../../../Downloads/Roboto/Roboto-Medium.ttf"; sourceTree = "<group>"; };
 		88CB8E8B286F609D00CFF2BF /* MemberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberViewController.swift; sourceTree = "<group>"; };
 		88CB8E8D286F60D400CFF2BF /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		88CCF2B728789D6D00C1552F /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
-		88CCF2B92879EC7300C1552F /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		88E2DD692861A13C0021E2A3 /* Todo App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Todo App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		88E2DD6C2861A13C0021E2A3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		88E2DD6E2861A13C0021E2A3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -119,6 +119,7 @@
 		88E2DD602861A13C0021E2A3 = {
 			isa = PBXGroup;
 			children = (
+				8814A4E5287CCA8600671E2F /* CustomCell.swift */,
 				88E2DD6B2861A13C0021E2A3 /* Todo App */,
 				88E2DD822861A13D0021E2A3 /* Todo AppTests */,
 				88E2DD8C2861A13D0021E2A3 /* Todo AppUITests */,
@@ -143,17 +144,16 @@
 			children = (
 				88E2DD6C2861A13C0021E2A3 /* AppDelegate.swift */,
 				88E2DD6E2861A13C0021E2A3 /* SceneDelegate.swift */,
-				88E2DD702861A13C0021E2A3 /* ViewController.swift */,
 				8814A4DF287C100700671E2F /* Sub.storyboard */,
 				88E2DD722861A13C0021E2A3 /* Main.storyboard */,
 				88B05366286382FA00A2A416 /* Roboto-Medium.ttf */,
 				88E2DD752861A13D0021E2A3 /* Assets.xcassets */,
-				88CCF2B92879EC7300C1552F /* TableViewController.swift */,
+				88E2DD702861A13C0021E2A3 /* ViewController.swift */,
 				88CB8E8B286F609D00CFF2BF /* MemberViewController.swift */,
 				88CB8E8D286F60D400CFF2BF /* CalendarViewController.swift */,
+				88CCF2B728789D6D00C1552F /* AddViewController.swift */,
 				88E2DD772861A13D0021E2A3 /* LaunchScreen.storyboard */,
 				88E2DD7A2861A13D0021E2A3 /* Info.plist */,
-				88CCF2B728789D6D00C1552F /* AddViewController.swift */,
 			);
 			path = "Todo App";
 			sourceTree = "<group>";
@@ -427,11 +427,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				88CB8E8E286F60D400CFF2BF /* CalendarViewController.swift in Sources */,
-				88CCF2BA2879EC7300C1552F /* TableViewController.swift in Sources */,
 				88CB8E8C286F609D00CFF2BF /* MemberViewController.swift in Sources */,
 				88CCF2B828789D6D00C1552F /* AddViewController.swift in Sources */,
 				88E2DD712861A13C0021E2A3 /* ViewController.swift in Sources */,
 				88E2DD6D2861A13C0021E2A3 /* AppDelegate.swift in Sources */,
+				8814A4E6287CCA8600671E2F /* CustomCell.swift in Sources */,
 				88E2DD6F2861A13C0021E2A3 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
