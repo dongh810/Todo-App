@@ -16,11 +16,14 @@ class AddViewController: UIViewController {
         myTextView.isScrollEnabled = false
         myTextView.delegate = self
         myTextView.text = "내용을 입력해주세요"
-        myTextView.textColor = UIColor(red: 201/255, green: 201/255, blue: 203/255, alpha: 1)
-        myTextView.font = UIFont(name: "Roboto-Medium", size: 14)
+        myTextView.textColor = UIColor(red: 161/255, green: 161/255, blue: 170/255, alpha: 1)
+        myTextView.font = UIFont(name: "Inter-SemiBold", size: 14)
         myTextView.sizeToFit()
         
     }
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+            self.myTextView.resignFirstResponder()
+        }
     
 }
 extension AddViewController: UITextViewDelegate {
@@ -51,14 +54,14 @@ extension AddViewController: UITextViewDelegate {
 func textViewDidEndEditing(_ textView: UITextView) {
     if myTextView.text.isEmpty {
         myTextView.text =  "내용을 입력해주세요"
-        myTextView.textColor = UIColor.lightGray
+        myTextView.textColor = UIColor(red: 161/255, green: 161/255, blue: 170/255, alpha: 1)
     }
     
 }
 
 
 func textViewDidBeginEditing(_ textView: UITextView) {
-    if myTextView.textColor == UIColor.lightGray {
+    if myTextView.textColor == UIColor(red: 161/255, green: 161/255, blue: 170/255, alpha: 1) {
         myTextView.text = nil
         myTextView.textColor = UIColor.black
     }

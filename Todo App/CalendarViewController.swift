@@ -9,6 +9,14 @@ import UIKit
 import FSCalendar
 
 class CalendarViewController: UIViewController, FSCalendarDelegate, FSCalendarDataSource{
+    
+    @IBOutlet weak var contentBtn: UITableView!
+    @objc func contentBtnTapped(sender:UITapGestureRecognizer) {
+        let storyBoard = UIStoryboard(name: "Sub", bundle: nil)
+        let vc = storyBoard.instantiateViewController(withIdentifier: "ModifyViewController") as! ModifyViewController
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+   
     @IBOutlet weak var tableView_custom: UITableView!
     let cellName:String="customCell"
     let cellTitle: Array<String> = ["111","222","333"]
@@ -28,6 +36,7 @@ class CalendarViewController: UIViewController, FSCalendarDelegate, FSCalendarDa
      
      let korean: [String] = ["에스프레소", "아메리카노"]
      let english: [String] = ["espresso", "americano"]*/
+    
     // 네비게이션 전환 코드
     @IBAction func plusBtn(_ sender: UIButton) {
         let storyBoard = UIStoryboard(name: "Sub", bundle: nil)
@@ -84,35 +93,26 @@ class CalendarViewController: UIViewController, FSCalendarDelegate, FSCalendarDa
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        calendarView.headerHeight = 0
-        // YYYY년 M월 표시부 영역 높이
-        
-        calendarView.weekdayHeight = 16
-        // 날짜 표시부 행의 높이
-        calendarView.appearance.headerMinimumDissolvedAlpha = 0.0
-        //헤더 좌,우측 흐릿한 글씨 삭제
-        calendarView.appearance.headerDateFormat = "YYYY년 MM월" //날짜(헤더) 표시 형식
-        dateLabel.font = UIFont(name: "Roboto-Medium", size: 18)
+        calendarView.headerHeight = 0      // YYYY년 M월 표시부 영역 높이
+        calendarView.weekdayHeight = 16    // 날짜 표시부 행의 높이
+        calendarView.appearance.headerMinimumDissolvedAlpha = 0.0    //헤더 좌,우측 흐릿한 글씨 삭제
+        calendarView.placeholderType = .none
+        calendarView.appearance.headerDateFormat = "YYYY년 MM월"      //날짜(헤더) 표시 형식
+        dateLabel.font = UIFont(name: "Inter-SemiBold", size: 18)
         calendarView.scrollEnabled = true
-        calendarView.appearance.headerTitleColor = .white //2021년 1월(헤더) 색
-        calendarView.appearance.headerTitleFont = UIFont(name: "Roboto-Medium", size: 18)
-        //타이틀 폰트 크기
-        
-        calendarView.backgroundColor = .white // 배경색
-        calendarView.appearance.weekdayTextColor = .black //요일(월,화,수..) 글씨 색
-        calendarView.appearance.selectionColor = .blue //선택 된 날의 동그라미 색
+        calendarView.calendarHeaderView.isHidden = true
+        calendarView.backgroundColor = .white   // 배경색
+        calendarView.appearance.weekdayTextColor = UIColor(red: 113/255, green: 113/255, blue: 122/255, alpha: 1) //요일(월,화,수..) 글씨 색
+        calendarView.appearance.selectionColor = UIColor(red: 59/255, green: 130/255, blue: 246/255, alpha: 1) //선택 된 날의 동그라미 색
         calendarView.appearance.titleWeekendColor = .black //주말 날짜 색
         calendarView.appearance.titleDefaultColor = .black //기본 날짜 색
         
-        calendarView.appearance.titleTodayColor = .none
-        //Today에 표시되는 특정 글자색
-        calendarView.appearance.todayColor = .none
-        //Today에 표시되는 선택 전 동그라미 색
-        calendarView.appearance.todaySelectionColor = .none
-        //Today에 표시되는 선택 후 동그라미 색
-        
-        
-        calendarView.appearance.titleFont = UIFont(name: "Roboto-Medium", size: 11)
+        calendarView.appearance.titleTodayColor = .none          //Today에 표시되는 특정 글자색
+        calendarView.appearance.todayColor = .none              //Today에 표시되는 선택 전 동그라미 색
+        calendarView.appearance.todaySelectionColor = .none     //Today에 표시되는 선택 후 동그라미 색
+    
+        calendarView.appearance.titleFont = UIFont(name: "Inter-SemiBold", size: 10)
+        calendarView.appearance.weekdayFont = UIFont(name: "Inter-SemiBold", size: 10)
         calendarView.calendarWeekdayView.weekdayLabels[0].text = "SUN"
         calendarView.calendarWeekdayView.weekdayLabels[1].text = "MON"
         calendarView.calendarWeekdayView.weekdayLabels[2].text = "TUE"
@@ -124,6 +124,11 @@ class CalendarViewController: UIViewController, FSCalendarDelegate, FSCalendarDa
         //테이블
         tableView_custom.delegate = self
         tableView_custom.dataSource = self
+       
+        
+        //클릭액션
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(contentBtnTapped))
+        contentBtn.addGestureRecognizer(tapGestureRecognizer)
         
     }
     
@@ -142,6 +147,7 @@ extension CalendarViewController: UITableViewDataSource,UITableViewDelegate {
         let customCell = tableView_custom.dequeueReusableCell(withIdentifier: cellName,for:indexPath) as! CustomCell
         customCell.icon.image = UIImage(systemName: cellimage[indexPath.row])
         customCell.head.text = cellTitle[indexPath.row]
+        customCell.selectionStyle = .none
         
         return customCell
     }
