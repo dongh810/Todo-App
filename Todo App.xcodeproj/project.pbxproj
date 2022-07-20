@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		0C394AB9C94D4CEFD99291AF /* Pods_Todo_App_Todo_AppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEB8B5669FC7F45E90F78F37 /* Pods_Todo_App_Todo_AppUITests.framework */; };
 		8814A4E0287C100700671E2F /* Sub.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8814A4DF287C100700671E2F /* Sub.storyboard */; };
-		8814A4E6287CCA8600671E2F /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8814A4E5287CCA8600671E2F /* CustomCell.swift */; };
 		88CB8E8C286F609D00CFF2BF /* MemberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CB8E8B286F609D00CFF2BF /* MemberViewController.swift */; };
 		88CB8E8E286F60D400CFF2BF /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CB8E8D286F60D400CFF2BF /* CalendarViewController.swift */; };
 		88CCF2B828789D6D00C1552F /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CCF2B728789D6D00C1552F /* AddViewController.swift */; };
@@ -19,7 +18,6 @@
 		88D4BBD32881D1FC003A3D15 /* Inter-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 88D4BBCD2881D1FC003A3D15 /* Inter-ExtraBold.ttf */; };
 		88D4BBD42881D1FC003A3D15 /* Inter-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 88D4BBCE2881D1FC003A3D15 /* Inter-ExtraLight.ttf */; };
 		88D4BBD52881D1FC003A3D15 /* Inter-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 88D4BBCF2881D1FC003A3D15 /* Inter-Black.ttf */; };
-		88D4BBD82881D353003A3D15 /* Inter-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 886B7AD32881D070008CDB94 /* Inter-SemiBold.ttf */; };
 		88D4BBD92881D357003A3D15 /* Inter-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 886B7AD22881D070008CDB94 /* Inter-Regular.ttf */; };
 		88D4BBDA2881D35A003A3D15 /* Inter-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 886B7AD12881D070008CDB94 /* Inter-Medium.ttf */; };
 		88E2DD6D2861A13C0021E2A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E2DD6C2861A13C0021E2A3 /* AppDelegate.swift */; };
@@ -31,8 +29,11 @@
 		88E2DD842861A13D0021E2A3 /* Todo_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E2DD832861A13D0021E2A3 /* Todo_AppTests.swift */; };
 		88E2DD8E2861A13D0021E2A3 /* Todo_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E2DD8D2861A13D0021E2A3 /* Todo_AppUITests.swift */; };
 		88E2DD902861A13D0021E2A3 /* Todo_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E2DD8F2861A13D0021E2A3 /* Todo_AppUITestsLaunchTests.swift */; };
+		88E37E352881F60300778868 /* Inter-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 88E37E342881F60300778868 /* Inter-SemiBold.ttf */; };
 		88E84C122881D4AA006C10D5 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 88E84C112881D4AA006C10D5 /* Roboto-Regular.ttf */; };
 		88E84C142881D95A006C10D5 /* ModifyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E84C132881D95A006C10D5 /* ModifyViewController.swift */; };
+		88EF5ABE288330E3002A587F /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EF5ABC288330E3002A587F /* CustomTableViewCell.swift */; };
+		88EF5ABF288330E3002A587F /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88EF5ABD288330E3002A587F /* CustomTableViewCell.xib */; };
 		D6AAD9C9163EE2F70534DDA5 /* Pods_Todo_AppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0BEC8FB54FBFF4B792D425D /* Pods_Todo_AppTests.framework */; };
 		F0C314ACD5D008A96A23BC62 /* Pods_Todo_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED265F2A37E5FFCEE893450A /* Pods_Todo_App.framework */; };
 /* End PBXBuildFile section */
@@ -61,10 +62,8 @@
 		55281718D3E171BE29D9697B /* Pods-Todo App-Todo AppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Todo App-Todo AppUITests.release.xcconfig"; path = "Target Support Files/Pods-Todo App-Todo AppUITests/Pods-Todo App-Todo AppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		81298FC9824D33B3F4848404 /* Pods-Todo AppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Todo AppTests.release.xcconfig"; path = "Target Support Files/Pods-Todo AppTests/Pods-Todo AppTests.release.xcconfig"; sourceTree = "<group>"; };
 		8814A4DF287C100700671E2F /* Sub.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Sub.storyboard; sourceTree = "<group>"; };
-		8814A4E5287CCA8600671E2F /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CustomCell.swift; path = ../CustomCell.swift; sourceTree = "<group>"; };
 		886B7AD12881D070008CDB94 /* Inter-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Medium.ttf"; sourceTree = "<group>"; };
 		886B7AD22881D070008CDB94 /* Inter-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Regular.ttf"; sourceTree = "<group>"; };
-		886B7AD32881D070008CDB94 /* Inter-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-SemiBold.ttf"; sourceTree = "<group>"; };
 		88CB8E8B286F609D00CFF2BF /* MemberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberViewController.swift; sourceTree = "<group>"; };
 		88CB8E8D286F60D400CFF2BF /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		88CCF2B728789D6D00C1552F /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
@@ -87,8 +86,11 @@
 		88E2DD892861A13D0021E2A3 /* Todo AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Todo AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		88E2DD8D2861A13D0021E2A3 /* Todo_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo_AppUITests.swift; sourceTree = "<group>"; };
 		88E2DD8F2861A13D0021E2A3 /* Todo_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		88E37E342881F60300778868 /* Inter-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Inter-SemiBold.ttf"; path = "../../../Downloads/Inter (1)/static/Inter-SemiBold.ttf"; sourceTree = "<group>"; };
 		88E84C112881D4AA006C10D5 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Regular.ttf"; path = "../../../Downloads/Roboto (1)/Roboto-Regular.ttf"; sourceTree = "<group>"; };
 		88E84C132881D95A006C10D5 /* ModifyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifyViewController.swift; sourceTree = "<group>"; };
+		88EF5ABC288330E3002A587F /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		88EF5ABD288330E3002A587F /* CustomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTableViewCell.xib; sourceTree = "<group>"; };
 		BEB8B5669FC7F45E90F78F37 /* Pods_Todo_App_Todo_AppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Todo_App_Todo_AppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E03FA90070B365250109C46C /* Pods-Todo AppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Todo AppTests.debug.xcconfig"; path = "Target Support Files/Pods-Todo AppTests/Pods-Todo AppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		ED265F2A37E5FFCEE893450A /* Pods_Todo_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Todo_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -175,14 +177,15 @@
 		88E2DD6B2861A13C0021E2A3 /* Todo App */ = {
 			isa = PBXGroup;
 			children = (
-				8814A4E5287CCA8600671E2F /* CustomCell.swift */,
 				88E2DD6C2861A13C0021E2A3 /* AppDelegate.swift */,
 				88E2DD6E2861A13C0021E2A3 /* SceneDelegate.swift */,
 				8814A4DF287C100700671E2F /* Sub.storyboard */,
+				88EF5ABC288330E3002A587F /* CustomTableViewCell.swift */,
+				88EF5ABD288330E3002A587F /* CustomTableViewCell.xib */,
 				88E2DD722861A13C0021E2A3 /* Main.storyboard */,
 				886B7AD12881D070008CDB94 /* Inter-Medium.ttf */,
 				886B7AD22881D070008CDB94 /* Inter-Regular.ttf */,
-				886B7AD32881D070008CDB94 /* Inter-SemiBold.ttf */,
+				88E37E342881F60300778868 /* Inter-SemiBold.ttf */,
 				88E84C112881D4AA006C10D5 /* Roboto-Regular.ttf */,
 				88D4BBC92881D1FC003A3D15 /* static */,
 				88E2DD752861A13D0021E2A3 /* Assets.xcassets */,
@@ -336,8 +339,9 @@
 				88D4BBD02881D1FC003A3D15 /* Inter-Light.ttf in Resources */,
 				88E2DD792861A13D0021E2A3 /* LaunchScreen.storyboard in Resources */,
 				88D4BBD12881D1FC003A3D15 /* Inter-Thin.ttf in Resources */,
-				88D4BBD82881D353003A3D15 /* Inter-SemiBold.ttf in Resources */,
+				88E37E352881F60300778868 /* Inter-SemiBold.ttf in Resources */,
 				88D4BBD32881D1FC003A3D15 /* Inter-ExtraBold.ttf in Resources */,
+				88EF5ABF288330E3002A587F /* CustomTableViewCell.xib in Resources */,
 				88D4BBD92881D357003A3D15 /* Inter-Regular.ttf in Resources */,
 				88D4BBD22881D1FC003A3D15 /* Inter-Bold.ttf in Resources */,
 				88D4BBDA2881D35A003A3D15 /* Inter-Medium.ttf in Resources */,
@@ -474,13 +478,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88EF5ABE288330E3002A587F /* CustomTableViewCell.swift in Sources */,
 				88CB8E8E286F60D400CFF2BF /* CalendarViewController.swift in Sources */,
 				88CB8E8C286F609D00CFF2BF /* MemberViewController.swift in Sources */,
 				88CCF2B828789D6D00C1552F /* AddViewController.swift in Sources */,
 				88E2DD712861A13C0021E2A3 /* ViewController.swift in Sources */,
 				88E84C142881D95A006C10D5 /* ModifyViewController.swift in Sources */,
 				88E2DD6D2861A13C0021E2A3 /* AppDelegate.swift in Sources */,
-				8814A4E6287CCA8600671E2F /* CustomCell.swift in Sources */,
 				88E2DD6F2861A13C0021E2A3 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

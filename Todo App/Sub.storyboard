@@ -44,51 +44,9 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" separatorInsetReference="fromAutomaticInsets" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="7yc-RL-Qsc">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="7yc-RL-Qsc">
                                 <rect key="frame" x="32" y="348" width="326" height="452"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="customCell" textLabel="aO4-ta-xMy" detailTextLabel="bP1-EQ-xeX" imageView="9y5-Az-zhC" style="IBUITableViewCellStyleSubtitle" id="tvg-dp-pmm" customClass="CustomCell" customModule="Todo_App" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.666666030883789" width="326" height="43.666667938232422"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tvg-dp-pmm" id="9xV-1b-cJh">
-                                            <rect key="frame" x="0.0" y="0.0" width="326" height="43.666667938232422"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="음" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="aO4-ta-xMy">
-                                                    <rect key="frame" x="51.333333333333336" y="6.0000000000000009" width="10.666666666666666" height="14.333333333333334"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="아아아아아아아아아앙" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bP1-EQ-xeX">
-                                                    <rect key="frame" x="51.333333333333343" y="22.333333333333336" width="104" height="14.333333333333334"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="9y5-Az-zhC">
-                                                    <rect key="frame" x="24.333333333333336" y="15.666666666666664" width="12" height="12"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <imageReference key="image" image="circlebadge.fill" catalog="system" symbolScale="small"/>
-                                                </imageView>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                        <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                        <connections>
-                                            <outlet property="head" destination="aO4-ta-xMy" id="kMl-cM-abf"/>
-                                            <outlet property="icon" destination="9y5-Az-zhC" id="rtO-0x-YeD"/>
-                                            <outlet property="sub" destination="bP1-EQ-xeX" id="Ub4-A6-jKw"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </prototypes>
-                                <connections>
-                                    <outlet property="dataSource" destination="REL-Dv-HVX" id="fbe-jh-R8D"/>
-                                    <outlet property="delegate" destination="REL-Dv-HVX" id="t3Q-kD-amb"/>
-                                </connections>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="obD-0x-Tuv">
                                 <rect key="frame" x="30" y="59" width="330" height="25"/>
@@ -166,14 +124,13 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="calendarView" destination="J9f-xL-5iu" id="fid-Vl-l3d"/>
-                        <outlet property="contentBtn" destination="7yc-RL-Qsc" id="g4y-M3-mQ8"/>
                         <outlet property="dateLabel" destination="XcP-pc-ty0" id="24m-Fx-eIu"/>
-                        <outlet property="tableView_custom" destination="7yc-RL-Qsc" id="vRD-v8-MUY"/>
+                        <outlet property="myTableView" destination="7yc-RL-Qsc" id="mkI-CM-QWY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dMc-6a-eS4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="16.923076923076923" y="833.88625592417054"/>
+            <point key="canvasLocation" x="22" y="834"/>
         </scene>
         <!--AddViewController-->
         <scene sceneID="RlL-6c-AY1">
@@ -212,9 +169,12 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="MCV-TR-LEr"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="추가하기">
-                                    <fontDescription key="titleFontDescription" name="Roboto-Medium" family="Roboto" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="Inter-SemiBold" family="Inter" pointSize="14"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="추가하기"/>
+                                <buttonConfiguration key="configuration" style="filled" title="추가하기" cornerStyle="large">
+                                    <fontDescription key="titleFontDescription" name="Inter-SemiBold" family="Inter" pointSize="14"/>
+                                    <color key="baseBackgroundColor" red="0.23137254901960785" green="0.50980392156862742" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mdf-u3-Eeh">
@@ -269,6 +229,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="Eys-rf-3c1"/>
                     <connections>
+                        <outlet property="addBtn" destination="33w-kD-i6z" id="xXx-Bv-Z6W"/>
                         <outlet property="myTextView" destination="WwL-zZ-eFS" id="kgX-Az-CIk"/>
                     </connections>
                 </viewController>
@@ -290,8 +251,9 @@
                                     <constraint firstAttribute="height" constant="40" id="fxX-BT-CyL"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="수정하기">
-                                    <fontDescription key="titleFontDescription" name="Roboto-Medium" family="Roboto" pointSize="14"/>
+                                <buttonConfiguration key="configuration" style="filled" title="수정하기" cornerStyle="large">
+                                    <fontDescription key="titleFontDescription" name="Inter-SemiBold" family="Inter" pointSize="14"/>
+                                    <color key="baseBackgroundColor" red="0.23137254901960785" green="0.50980392156862742" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>
                                 </buttonConfiguration>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sZg-A1-2pq">
@@ -299,9 +261,12 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="ykg-sA-Cfg"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="삭제하기">
-                                    <fontDescription key="titleFontDescription" name="Roboto-Medium" family="Roboto" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="Inter-SemiBold" family="Inter" pointSize="14"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="삭제하기"/>
+                                <buttonConfiguration key="configuration" style="filled" title="삭제하기" cornerStyle="large">
+                                    <fontDescription key="titleFontDescription" name="Inter-SemiBold" family="Inter" pointSize="14"/>
+                                    <color key="baseBackgroundColor" red="0.23137254901960785" green="0.50980392156862742" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 </buttonConfiguration>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hst-WY-Yx4">
@@ -381,13 +346,18 @@
                             <constraint firstAttribute="bottom" secondItem="sZg-A1-2pq" secondAttribute="bottom" constant="56" id="xTy-6h-uoO"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="srB-hL-GUd"/>
                     <connections>
+                        <outlet property="deleteBtn" destination="sZg-A1-2pq" id="euc-Jg-H7F"/>
+                        <outlet property="headText" destination="Ehl-2e-hat" id="GVQ-c2-FTH"/>
+                        <outlet property="mDate" destination="qwk-ee-Ug2" id="xVL-V5-a45"/>
                         <outlet property="metextView" destination="vVc-15-Hl3" id="XY4-EP-EvO"/>
+                        <outlet property="modifyBtn" destination="rcP-Qz-kcn" id="mrb-mt-eXn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iLV-Lb-uVX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1706" y="834"/>
+            <point key="canvasLocation" x="1683" y="834"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="zwV-RV-7Nf">
@@ -409,7 +379,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="circlebadge.fill" catalog="system" width="128" height="120"/>
         <image name="line.3.horizontal" catalog="system" width="128" height="64"/>
         <image name="plus.app.fill" catalog="system" width="128" height="114"/>
         <systemColor name="labelColor">

@@ -9,6 +9,7 @@ import UIKit
 
 class AddViewController: UIViewController {
     
+    @IBOutlet weak var addBtn: UIButton!
     @IBOutlet weak var myTextView: UITextView!
     
     override func viewDidLoad() {
@@ -19,6 +20,12 @@ class AddViewController: UIViewController {
         myTextView.textColor = UIColor(red: 161/255, green: 161/255, blue: 170/255, alpha: 1)
         myTextView.font = UIFont(name: "Inter-SemiBold", size: 14)
         myTextView.sizeToFit()
+        addBtn.layer.cornerRadius = 10
+        addBtn.layer.shadowColor = UIColor.gray.cgColor
+        addBtn.layer.masksToBounds = false
+        addBtn.layer.shadowOffset = CGSize(width: 4, height: 4)
+        addBtn.layer.shadowRadius = 5
+        addBtn.layer.shadowOpacity = 0.3
         
     }
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
