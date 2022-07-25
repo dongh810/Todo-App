@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class ModifyViewController: UIViewController {
     
@@ -14,6 +15,9 @@ class ModifyViewController: UIViewController {
     @IBOutlet weak var metextView: UITextView!
     @IBOutlet weak var headText: UITextField!
     @IBOutlet weak var mDate: UITextField!
+    @IBOutlet weak var abc: NSLayoutConstraint!
+    
+     //메인 테이블뷰에서 데이터 넘어오는 코드
     var modifyHead: String = ""
     var modifyconctent: String = ""
     var date: String = ""
@@ -34,34 +38,38 @@ class ModifyViewController: UIViewController {
         modifyBtn.layer.shadowOffset = CGSize(width: 4, height: 4)
         modifyBtn.layer.shadowRadius = 5
         modifyBtn.layer.shadowOpacity = 0.3
+        //메인 테이블뷰에서 데이터 넘어오는코드
         headText.text = modifyHead
         metextView.text = modifyconctent
         mDate.text = date
+        abc.isActive = false
         
         
         
         // Do any additional setup after loading the view.
     }
+  
+    
 }
 extension ModifyViewController: UITextViewDelegate {
-        
-        
+    
+    
     func textViewDidChange(_ textView: UITextView) {
+        
+        let size = CGSize(width: view.frame.width, height: .infinity)
+        let estimatedSize = textView.sizeThatFits(size)
+        
+        textView.constraints.forEach { (constraint) in
             
-            let size = CGSize(width: view.frame.width, height: .infinity)
-            let estimatedSize = textView.sizeThatFits(size)
-            
-            textView.constraints.forEach { (constraint) in
+            /// 180 이하일때는 더 이상 줄어들지 않게하기
+            if estimatedSize.height <= 20{
                 
-                /// 180 이하일때는 더 이상 줄어들지 않게하기
-                if estimatedSize.height <= 20{
-                    
-                }
-                else {
-                    if constraint.firstAttribute == .height {
-                        constraint.constant = estimatedSize.height
-                    }
+            }
+            else {
+                if constraint.firstAttribute == .height {
+                    constraint.constant = estimatedSize.height
                 }
             }
         }
+    }
 }

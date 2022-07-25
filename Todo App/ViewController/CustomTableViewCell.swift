@@ -12,7 +12,6 @@ class CustomTableViewCell: UITableViewCell {
    
     @IBOutlet weak var content: UILabel!
     @IBOutlet weak var head: UILabel!
-    @IBOutlet weak var blueImg: UIButton!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

@@ -88,6 +88,9 @@
                                     <fontDescription key="titleFontDescription" name="Roboto-Regular" family="Roboto" pointSize="20"/>
                                     <color key="baseBackgroundColor" red="0.23137254901960785" green="0.50980392156862742" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="enrollBtn:" destination="ZTM-kl-kHY" eventType="touchUpInside" id="Lsh-aH-iFY"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YCE-3I-Gem">
                                 <rect key="frame" x="279.33333333333331" y="423" width="78.666666666666686" height="19"/>
@@ -162,7 +165,11 @@
                     </view>
                     <navigationItem key="navigationItem" id="ZzL-v5-8wn"/>
                     <connections>
-                        <outlet property="signbtnr" destination="i7p-rQ-q7u" id="auz-6i-HHR"/>
+                        <outlet property="idInput" destination="zDW-0v-Hel" id="dd2-nU-Ila"/>
+                        <outlet property="nameInput" destination="xVu-sh-tqe" id="dQa-gu-I10"/>
+                        <outlet property="pwInput" destination="fIv-t1-04m" id="kHb-hz-KfS"/>
+                        <outlet property="pwcheck" destination="qaB-8C-xz8" id="sWb-cX-Zft"/>
+                        <outlet property="signbtnr" destination="i7p-rQ-q7u" id="nnM-2M-BLq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GSn-Tn-8jk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -297,7 +304,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="cwP-SZ-fmz"/>
                     <connections>
+                        <outlet property="idTextField" destination="Xvr-z7-0fW" id="uxm-zR-shy"/>
                         <outlet property="loginBtnr" destination="ZJ3-Or-Neh" id="dUI-hm-ReR"/>
+                        <outlet property="pwTextField" destination="osn-En-U7c" id="4gZ-rW-eEK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="52R-cI-s9B" sceneMemberID="firstResponder"/>

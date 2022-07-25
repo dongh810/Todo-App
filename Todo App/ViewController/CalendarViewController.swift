@@ -7,63 +7,116 @@
 import Foundation
 import UIKit
 import FSCalendar
+import Alamofire
 
 class CalendarViewController: UIViewController, FSCalendarDelegate, FSCalendarDataSource, FSCalendarDelegateAppearance,UITableViewDataSource
 {
-//    var events: [Date] = []
-//
-//    func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
-//           print(dateFormatter.string(from: date) + " 선택됨")
-//       }
-//    func setUpEvents() {
-//        events.removeAll()
+    
+    //날짜 변수 선언
+    var selectedDate = ""
+    //전체 투두 리스트
+    var allTodo: [Object] = []
+    
+    //이벤트 닷 출력
+    var events: [String] = []
+    
+    func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
+        
+        let formatter = DateFormatter()
+        formatter.locale = Locale(identifier: "ko_KR")
+        formatter.dateFormat = "yyyy-MM-dd"
+        selectedDate = formatter.string(from: date)
+        print(formatter.string(from: date) + " 선택됨")
+        FindTodo()
+        
+    }
+    func setUpEvents() {
+        events.removeAll()
 //        let formatter = DateFormatter()
 //        formatter.locale = Locale(identifier: "ko_KR")
 //        formatter.dateFormat = "yyyy-MM-dd"
-//        let xmas = formatter.date(from: "2022-07-25")
-//        let sampledate = formatter.date(from: "2020-08-22")
-//        events = [xmas!, sampledate!]
-//    }
-//    func calendar(_ calendar: FSCalendar, numberOfEventsFor date: Date) -> Int {
-//            if self.events.contains(date) {
-//                return 1
-//            } else {
-//                return 0
-//            }
-//        }
+//        let xmas = formatter.date(from:"\(allTodo)")
+//        let dots = allTodo
+       // events.append(allTodo[0].date)
+        print(events)
+    
+    }
+    func calendar(_ calendar: FSCalendar, numberOfEventsFor date: Date) -> Int {
+        let formatter = DateFormatter()
+        formatter.locale = Locale(identifier: "ko_KR")
+        formatter.dateFormat = "yyyy-MM-dd"
+        let eventdot = formatter.string(from: date)
+        if self.events.contains(eventdot) {
+            return 1
+        } else {
+            return 0
+        }
+    }
+    //이벤트 닷 위치
+    func calendar(_ calendar: FSCalendar, willDisplay cell: FSCalendarCell, for date: Date, at monthPosition: FSCalendarMonthPosition) {
+        let eventScaleFactor: CGFloat = 1.3
+        cell.eventIndicator.transform = CGAffineTransform(scaleX: eventScaleFactor, y: eventScaleFactor)
+    }
+    
+    func calendar(_ calendar: FSCalendar, appearance: FSCalendarAppearance, eventOffsetFor date: Date) -> CGPoint {
+        return CGPoint(x: 0, y: -7)
+    }
+    //테이블 뷰
     let df = DateFormatter()
-    let headdata = ["one","two","three","four","five"]
-    let contentdata = ["일","이","삼","사","오"]
+    var dataSet: [object] = []
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-       guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "ModifyViewController") as? ModifyViewController else {return}
-        vc.modifyHead = headdata[indexPath.row]
-        vc.modifyconctent = contentdata[indexPath.row]
+        guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "ModifyViewController") as? ModifyViewController else {return}
+        vc.modifyHead = dataSet[indexPath.row].title
+        vc.modifyconctent = dataSet[indexPath.row].content
+        vc.date = dataSet[indexPath.row].date
         self.navigationController?.pushViewController(vc, animated: true)
         print("fdfd")
         
         
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return UITableView.automaticDimension
+        return UITableView.automaticDimension //자동 높이 조절
     }
+    
     @IBOutlet weak var myTableView: UITableView!
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.headdata.count
+        return self.dataSet.count
         
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = myTableView.dequeueReusableCell(withIdentifier: "a", for: indexPath) as! CustomTableViewCell
         
-        cell.head.text = headdata[indexPath.row]
-        cell.content.text = contentdata[indexPath.row]
+        cell.head.text = dataSet[indexPath.row].title
+        cell.content.text = dataSet[indexPath.row].content
         
         return cell
     }
     
+    //테이블뷰 새로고침
+    func initRefresh() {
+        let refresh = UIRefreshControl()
+        refresh.addTarget(self, action: #selector(updateUI(refresh:)), for: .valueChanged)
+        refresh.attributedTitle = NSAttributedString(string:"새로고침")
+        
+        if #available(iOS 10.0, *){
+            myTableView.refreshControl = refresh
+        }
+        else{
+            myTableView.addSubview(refresh)
+        }
+        
+    }
+    @objc func updateUI(refresh: UIRefreshControl) {
+        refresh.endRefreshing()
+        myTableView.addSubview(refresh)
+    }
     
     
-   
+    
+    
     // 네비게이션 전환 코드
     @IBAction func plusBtn(_ sender: UIButton) {
         let storyBoard = UIStoryboard(name: "Sub", bundle: nil)
@@ -71,7 +124,7 @@ class CalendarViewController: UIViewController, FSCalendarDelegate, FSCalendarDa
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
-   
+    
     
     //캘린더
     var eventsArray = [Date]()
@@ -103,9 +156,9 @@ class CalendarViewController: UIViewController, FSCalendarDelegate, FSCalendarDa
          */
     }
     override func viewWillDisappear(_ animated: Bool) {
-            super.viewWillDisappear(animated)
-            navigationController?.setNavigationBarHidden(false, animated: animated)
-        }
+        super.viewWillDisappear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
     
     private func scrollCurrentPage(isPrev: Bool) {
         let cal = Calendar.current
@@ -128,7 +181,7 @@ class CalendarViewController: UIViewController, FSCalendarDelegate, FSCalendarDa
     func calendarCurrentPageDidChange(_ calendar: FSCalendar) {
         self.dateLabel.text = self.dateFormatter.string(from: calendar.currentPage)
     }
-  
+    
     
     
     override func viewDidLoad() {
@@ -149,9 +202,8 @@ class CalendarViewController: UIViewController, FSCalendarDelegate, FSCalendarDa
         calendarView.appearance.titleTodayColor = .none         //Today에 표시되는 특정 글자색
         calendarView.appearance.todayColor = .none         //Today에 표시되는 선택 전 동그라미 색
         calendarView.appearance.todaySelectionColor = .none//Today에 표시되는 선택 후 동그라미 색
-        calendarView.appearance.eventDefaultColor = UIColor.black
-        calendarView.appearance.eventSelectionColor = UIColor.black
-    
+        calendarView.appearance.eventDefaultColor = UIColor(red: 59/255, green: 130/255, blue: 246/255, alpha: 1)
+        calendarView.appearance.eventSelectionColor = UIColor.white
         calendarView.appearance.titleFont = UIFont(name: "Inter-SemiBold", size: 10)
         calendarView.appearance.weekdayFont = UIFont(name: "Inter-SemiBold", size: 10)
         calendarView.calendarWeekdayView.weekdayLabels[0].text = "SUN"
@@ -164,28 +216,83 @@ class CalendarViewController: UIViewController, FSCalendarDelegate, FSCalendarDa
         
         calendarView.dataSource = self
         calendarView.delegate = self
-   
-                
+        myTableView.dataSource = self
+        setUpEvents()
+        self.myTableView.reloadData()
+        initRefresh()
+        let date = Date()
+        let formatter = DateFormatter()
+        formatter.locale = Locale(identifier: "ko_KR")
+        formatter.dateFormat = "yyyy-MM-dd"
+        selectedDate = formatter.string(from: date)
+        
+        
+        
+        
         
         //테이블 뷰
         let CustomTableViewCellNib = UINib(nibName: String(describing: CustomTableViewCell.self), bundle: nil)
         
         self.myTableView.register(CustomTableViewCellNib,forCellReuseIdentifier:"a")
-        self.myTableView.rowHeight = UITableView.automaticDimension
-        self.myTableView.estimatedRowHeight = 120
         self.myTableView.delegate = self
         self.myTableView.dataSource = self
         myTableView.rowHeight = UITableView.automaticDimension
-       
-       
+        myTableView.rowHeight = UITableView.automaticDimension
+        myTableView.estimatedRowHeight = 50
+        
+        
     }
-  
-   
+    
+    
+    //조회 API
+    func FindTodo() {
+        let header :HTTPHeaders = ["Authorization": UserDefaults.standard.string(forKey: "userToken")!]
+        let url = "http://15.164.102.4:3001/todo/\(selectedDate)"
+        AF.request(url, method: .get, headers:header ).validate()
+            .responseDecodable(of: FindTodoResponse.self){
+                response in
+                switch response.result{
+                case.success(let response):
+                    print(response.message)
+                    print(response.data)
+                    self.dataSet = response.data?.findedTodo ?? []
+                    //print(self.dataSet)
+                    
+                    self.myTableView.reloadData()
+                    
+                    
+                case.failure(let error):
+                    print("\(error.localizedDescription)")
+                }
+            }
+    }
+    //전체 투두 조회 API
+    func FindAllTodo() {
+        let header :HTTPHeaders = ["Authorization": UserDefaults.standard.string(forKey: "userToken")!]
+        let url = "http://15.164.102.4:3001/todo"
+        AF.request(url, method: .get, headers: header).validate().responseDecodable(of: FindAllTodoResponse.self){
+            response in
+            switch response.result{
+            case.success(let response):
+                print(response.message)
+                //self.allTodo = response.data?.findedAllTodo ?? []
+                print(self.allTodo)
+                self.setUpEvents()
+                self.calendarView.reloadData()
+            case.failure(let error):
+                print("\(error.localizedDescription)")
+            }
+        }
+        
+    }
+    
+    
+    
 }
 extension CalendarViewController: UITableViewDelegate{
     
-
+    
+    
     
 }
-
 

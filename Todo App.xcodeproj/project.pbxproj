@@ -9,6 +9,18 @@
 /* Begin PBXBuildFile section */
 		0C394AB9C94D4CEFD99291AF /* Pods_Todo_App_Todo_AppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEB8B5669FC7F45E90F78F37 /* Pods_Todo_App_Todo_AppUITests.framework */; };
 		8814A4E0287C100700671E2F /* Sub.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8814A4DF287C100700671E2F /* Sub.storyboard */; };
+		886B6DD4288F138C00A3B023 /* FindAllTodoRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886B6DD3288F138C00A3B023 /* FindAllTodoRequest.swift */; };
+		886B6DD6288F2EDF00A3B023 /* DeleteTodoRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886B6DD5288F2EDF00A3B023 /* DeleteTodoRequest.swift */; };
+		886B6DDA288F328A00A3B023 /* FindAllTodoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886B6DD9288F328A00A3B023 /* FindAllTodoResponse.swift */; };
+		886B6DDC288F37F500A3B023 /* DeleteTodoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886B6DDB288F37F500A3B023 /* DeleteTodoResponse.swift */; };
+		886C589D2889A86700D832B8 /* loginrequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886C589C2889A86700D832B8 /* loginrequest.swift */; };
+		886C589F2889AA7600D832B8 /* loginresponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886C589E2889AA7600D832B8 /* loginresponse.swift */; };
+		886C58A12889C05500D832B8 /* EnrollRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886C58A02889C05500D832B8 /* EnrollRequest.swift */; };
+		886C58A32889C0FA00D832B8 /* EnrollResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886C58A22889C0F900D832B8 /* EnrollResponse.swift */; };
+		886C58A5288A66D100D832B8 /* AddTodoRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886C58A4288A66D100D832B8 /* AddTodoRequest.swift */; };
+		886C58A7288A682800D832B8 /* AddTodoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886C58A6288A682800D832B8 /* AddTodoResponse.swift */; };
+		88AB1795288B17060041547F /* FindTodoRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AB1794288B17060041547F /* FindTodoRequest.swift */; };
+		88AB1797288B19580041547F /* FindTodoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AB1796288B19580041547F /* FindTodoResponse.swift */; };
 		88CB8E8C286F609D00CFF2BF /* MemberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CB8E8B286F609D00CFF2BF /* MemberViewController.swift */; };
 		88CB8E8E286F60D400CFF2BF /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CB8E8D286F60D400CFF2BF /* CalendarViewController.swift */; };
 		88CCF2B828789D6D00C1552F /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CCF2B728789D6D00C1552F /* AddViewController.swift */; };
@@ -62,8 +74,20 @@
 		55281718D3E171BE29D9697B /* Pods-Todo App-Todo AppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Todo App-Todo AppUITests.release.xcconfig"; path = "Target Support Files/Pods-Todo App-Todo AppUITests/Pods-Todo App-Todo AppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		81298FC9824D33B3F4848404 /* Pods-Todo AppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Todo AppTests.release.xcconfig"; path = "Target Support Files/Pods-Todo AppTests/Pods-Todo AppTests.release.xcconfig"; sourceTree = "<group>"; };
 		8814A4DF287C100700671E2F /* Sub.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Sub.storyboard; sourceTree = "<group>"; };
+		886B6DD3288F138C00A3B023 /* FindAllTodoRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindAllTodoRequest.swift; sourceTree = "<group>"; };
+		886B6DD5288F2EDF00A3B023 /* DeleteTodoRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteTodoRequest.swift; sourceTree = "<group>"; };
+		886B6DD9288F328A00A3B023 /* FindAllTodoResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FindAllTodoResponse.swift; path = "Todo App/FindAllTodoResponse.swift"; sourceTree = SOURCE_ROOT; };
+		886B6DDB288F37F500A3B023 /* DeleteTodoResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteTodoResponse.swift; sourceTree = "<group>"; };
 		886B7AD12881D070008CDB94 /* Inter-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Medium.ttf"; sourceTree = "<group>"; };
 		886B7AD22881D070008CDB94 /* Inter-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Regular.ttf"; sourceTree = "<group>"; };
+		886C589C2889A86700D832B8 /* loginrequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginrequest.swift; sourceTree = "<group>"; };
+		886C589E2889AA7600D832B8 /* loginresponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginresponse.swift; sourceTree = "<group>"; };
+		886C58A02889C05500D832B8 /* EnrollRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnrollRequest.swift; sourceTree = "<group>"; };
+		886C58A22889C0F900D832B8 /* EnrollResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnrollResponse.swift; sourceTree = "<group>"; };
+		886C58A4288A66D100D832B8 /* AddTodoRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTodoRequest.swift; sourceTree = "<group>"; };
+		886C58A6288A682800D832B8 /* AddTodoResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTodoResponse.swift; sourceTree = "<group>"; };
+		88AB1794288B17060041547F /* FindTodoRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindTodoRequest.swift; sourceTree = "<group>"; };
+		88AB1796288B19580041547F /* FindTodoResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindTodoResponse.swift; sourceTree = "<group>"; };
 		88CB8E8B286F609D00CFF2BF /* MemberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberViewController.swift; sourceTree = "<group>"; };
 		88CB8E8D286F60D400CFF2BF /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		88CCF2B728789D6D00C1552F /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
@@ -138,6 +162,49 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		88AB178F288B00430041547F /* API */ = {
+			isa = PBXGroup;
+			children = (
+				886B6DD5288F2EDF00A3B023 /* DeleteTodoRequest.swift */,
+				886B6DDB288F37F500A3B023 /* DeleteTodoResponse.swift */,
+				886B6DD9288F328A00A3B023 /* FindAllTodoResponse.swift */,
+				886B6DD3288F138C00A3B023 /* FindAllTodoRequest.swift */,
+				88AB1794288B17060041547F /* FindTodoRequest.swift */,
+				88AB1796288B19580041547F /* FindTodoResponse.swift */,
+				886C58A22889C0F900D832B8 /* EnrollResponse.swift */,
+				886C58A02889C05500D832B8 /* EnrollRequest.swift */,
+				886C589E2889AA7600D832B8 /* loginresponse.swift */,
+				886C58A6288A682800D832B8 /* AddTodoResponse.swift */,
+				886C58A4288A66D100D832B8 /* AddTodoRequest.swift */,
+				886C589C2889A86700D832B8 /* loginrequest.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		88AB1790288B005B0041547F /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				88EF5ABC288330E3002A587F /* CustomTableViewCell.swift */,
+				88CB8E8D286F60D400CFF2BF /* CalendarViewController.swift */,
+				88CCF2B728789D6D00C1552F /* AddViewController.swift */,
+				88E2DD702861A13C0021E2A3 /* ViewController.swift */,
+				88CB8E8B286F609D00CFF2BF /* MemberViewController.swift */,
+				88E84C132881D95A006C10D5 /* ModifyViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		88AB1791288B007C0041547F /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				8814A4DF287C100700671E2F /* Sub.storyboard */,
+				88E2DD772861A13D0021E2A3 /* LaunchScreen.storyboard */,
+				88EF5ABD288330E3002A587F /* CustomTableViewCell.xib */,
+				88E2DD722861A13C0021E2A3 /* Main.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
 		88D4BBC92881D1FC003A3D15 /* static */ = {
 			isa = PBXGroup;
 			children = (
@@ -179,22 +246,15 @@
 			children = (
 				88E2DD6C2861A13C0021E2A3 /* AppDelegate.swift */,
 				88E2DD6E2861A13C0021E2A3 /* SceneDelegate.swift */,
-				8814A4DF287C100700671E2F /* Sub.storyboard */,
-				88EF5ABC288330E3002A587F /* CustomTableViewCell.swift */,
-				88EF5ABD288330E3002A587F /* CustomTableViewCell.xib */,
-				88E2DD722861A13C0021E2A3 /* Main.storyboard */,
+				88AB1790288B005B0041547F /* ViewController */,
+				88AB178F288B00430041547F /* API */,
+				88AB1791288B007C0041547F /* Storyboard */,
 				886B7AD12881D070008CDB94 /* Inter-Medium.ttf */,
 				886B7AD22881D070008CDB94 /* Inter-Regular.ttf */,
 				88E37E342881F60300778868 /* Inter-SemiBold.ttf */,
 				88E84C112881D4AA006C10D5 /* Roboto-Regular.ttf */,
 				88D4BBC92881D1FC003A3D15 /* static */,
 				88E2DD752861A13D0021E2A3 /* Assets.xcassets */,
-				88E84C132881D95A006C10D5 /* ModifyViewController.swift */,
-				88E2DD702861A13C0021E2A3 /* ViewController.swift */,
-				88CB8E8B286F609D00CFF2BF /* MemberViewController.swift */,
-				88CB8E8D286F60D400CFF2BF /* CalendarViewController.swift */,
-				88CCF2B728789D6D00C1552F /* AddViewController.swift */,
-				88E2DD772861A13D0021E2A3 /* LaunchScreen.storyboard */,
 				88E2DD7A2861A13D0021E2A3 /* Info.plist */,
 			);
 			path = "Todo App";
@@ -478,13 +538,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				886B6DD4288F138C00A3B023 /* FindAllTodoRequest.swift in Sources */,
+				88AB1795288B17060041547F /* FindTodoRequest.swift in Sources */,
 				88EF5ABE288330E3002A587F /* CustomTableViewCell.swift in Sources */,
+				886B6DDA288F328A00A3B023 /* FindAllTodoResponse.swift in Sources */,
 				88CB8E8E286F60D400CFF2BF /* CalendarViewController.swift in Sources */,
+				886B6DD6288F2EDF00A3B023 /* DeleteTodoRequest.swift in Sources */,
+				886C58A5288A66D100D832B8 /* AddTodoRequest.swift in Sources */,
+				886C589F2889AA7600D832B8 /* loginresponse.swift in Sources */,
+				886C589D2889A86700D832B8 /* loginrequest.swift in Sources */,
 				88CB8E8C286F609D00CFF2BF /* MemberViewController.swift in Sources */,
+				88AB1797288B19580041547F /* FindTodoResponse.swift in Sources */,
+				886B6DDC288F37F500A3B023 /* DeleteTodoResponse.swift in Sources */,
 				88CCF2B828789D6D00C1552F /* AddViewController.swift in Sources */,
+				886C58A32889C0FA00D832B8 /* EnrollResponse.swift in Sources */,
 				88E2DD712861A13C0021E2A3 /* ViewController.swift in Sources */,
+				886C58A12889C05500D832B8 /* EnrollRequest.swift in Sources */,
 				88E84C142881D95A006C10D5 /* ModifyViewController.swift in Sources */,
 				88E2DD6D2861A13C0021E2A3 /* AppDelegate.swift in Sources */,
+				886C58A7288A682800D832B8 /* AddTodoResponse.swift in Sources */,
 				88E2DD6F2861A13C0021E2A3 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

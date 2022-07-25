@@ -3,8 +3,8 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
-        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -23,46 +23,36 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="하암" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uQs-6c-UcK">
-                        <rect key="frame" x="25" y="3" width="19.5" height="16"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="16" id="RXC-8x-BnN"/>
-                        </constraints>
+                        <rect key="frame" x="20" y="2" width="19.5" height="13.5"/>
                         <fontDescription key="fontDescription" name="Inter-SemiBold" family="Inter" pointSize="11"/>
-                        <nil key="textColor"/>
+                        <color key="textColor" systemColor="systemGray2Color"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이잉" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eXL-uC-2sE">
-                        <rect key="frame" x="24.5" y="19" width="21" height="15"/>
+                        <rect key="frame" x="20" y="15.5" width="21" height="15"/>
                         <fontDescription key="fontDescription" name="Inter-SemiBold" family="Inter" pointSize="12"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1CN-2U-jUf">
-                        <rect key="frame" x="5" y="5" width="12" height="12"/>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="23L-KR-uva">
+                        <rect key="frame" x="0.0" y="2.5" width="12" height="11"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="12" id="6w9-Bl-J7g"/>
-                            <constraint firstAttribute="height" constant="12" id="kL6-Vr-yF1"/>
+                            <constraint firstAttribute="width" constant="12" id="L7O-xj-eUF"/>
+                            <constraint firstAttribute="height" constant="12" id="tdD-eo-ceS"/>
                         </constraints>
-                        <state key="normal" title="Button"/>
-                        <buttonConfiguration key="configuration" style="filled">
-                            <imageReference key="image" image="circle.fill" catalog="system" symbolScale="default"/>
-                            <color key="baseForegroundColor" red="0.23137254900000001" green="0.50980392159999999" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <color key="baseBackgroundColor" red="0.23137254901960785" green="0.50980392156862742" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        </buttonConfiguration>
-                    </button>
+                    </imageView>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="uQs-6c-UcK" firstAttribute="leading" secondItem="1CN-2U-jUf" secondAttribute="trailing" constant="8" id="1EE-Ai-3hN"/>
-                    <constraint firstItem="uQs-6c-UcK" firstAttribute="centerY" secondItem="1CN-2U-jUf" secondAttribute="centerY" id="1p0-zz-9Q9"/>
-                    <constraint firstItem="1CN-2U-jUf" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="2Ij-G6-vhP"/>
-                    <constraint firstItem="1CN-2U-jUf" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="HwN-y9-bdg"/>
-                    <constraint firstItem="eXL-uC-2sE" firstAttribute="centerX" secondItem="uQs-6c-UcK" secondAttribute="centerX" id="NGV-eF-owr"/>
+                    <constraint firstItem="23L-KR-uva" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="2" id="Kmq-zE-Wt4"/>
+                    <constraint firstItem="23L-KR-uva" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="RMQ-e9-ofu"/>
+                    <constraint firstItem="uQs-6c-UcK" firstAttribute="leading" secondItem="23L-KR-uva" secondAttribute="trailing" constant="8" id="TTl-Hf-3hL"/>
+                    <constraint firstItem="eXL-uC-2sE" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="lX4-1S-Ykp"/>
                     <constraint firstItem="eXL-uC-2sE" firstAttribute="top" secondItem="uQs-6c-UcK" secondAttribute="bottom" id="tet-EC-GOF"/>
+                    <constraint firstItem="uQs-6c-UcK" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="2" id="vDq-e6-3TZ"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="blueImg" destination="1CN-2U-jUf" id="6Xj-tV-sef"/>
                 <outlet property="content" destination="eXL-uC-2sE" id="GEL-CA-64J"/>
                 <outlet property="head" destination="uQs-6c-UcK" id="x3B-bd-LhR"/>
             </connections>
@@ -71,5 +61,8 @@
     </objects>
     <resources>
         <image name="circle.fill" catalog="system" width="128" height="121"/>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>
